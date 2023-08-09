@@ -1,6 +1,9 @@
 let http = require('http')
 
-
+let users = [
+    {"id": 1, "banned": true, "name": "Oleg"},
+    {"id": 2, "banned": false, "name": "Ali"}
+]
 let cors = (req,res) => {
     
 }
@@ -11,7 +14,12 @@ let server = http.createServer( (req, res)=>{
     if(cors(req,res)) return 
 
     switch (req.url) {
-        case '/': res.write(`<h2>Home<h2/>`)
+        case '/users': 
+        if ((req.method === POST)){
+users.push({name:'Alex'})
+        }else {
+            res.write(JSON.stringify(users))
+        }
             break;
             case '/tasks': res.write(`<h2>Tasks<h2/>`)
             break;
