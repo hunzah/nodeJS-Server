@@ -6,7 +6,8 @@ let users = [
 ]
 let cors = (req,res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Method', '*')
+    res.setHeader('Access-Control-Request-Method', '*')
+    res.setHeader('Access-Control-Allow-Method', 'OPTIONS, GET')
 }
 
 
