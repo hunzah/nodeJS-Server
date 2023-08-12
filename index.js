@@ -1,12 +1,16 @@
 let http = require('http')
 
+
+let cors = (req,res) => {
+    
+}
+
+
 let server = http.createServer( (req, res)=>{
-    console.log('some request')
-    res.write('aaaaaa')
-    res.end()
 
+    if(cors(req,res)) return 
 
-    switch (url) {
+    switch (req.url) {
         case '/': res.write(`<h2>Home<h2/>`)
             break;
             case '/tasks': res.write(`<h2>Tasks<h2/>`)
