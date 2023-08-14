@@ -11,6 +11,8 @@ let cors = (req,res) => {
     res.setHeader('Access-Control-Allow-Headers', '*')
     if (req.method === 'OPTIONS'){
         res.writeHead(200)
+        res.end();
+        return
     }
 }
 
