@@ -4,6 +4,13 @@ const users = [
 ]
 
 
-const getUsers = () => {
+ const getUsers = () => {
     return users
 }
+
+ const setUsers = () => {
+    users.push({"name":"Lesha", "banned": false,})
+}
+
+exports.getUsers = getUsers
+exports.setUsers = setUsers
