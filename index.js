@@ -16,7 +16,7 @@ let server = http.createServer( (req, res)=>{
     switch (req.url) {
         case '/users': 
         if ((req.method === POST)){
-users.push({name:'Alex'})
+            users.push({name:'Alex'})
         }else {
             res.write(JSON.stringify(users))
         }
