@@ -1,4 +1,5 @@
 let http = require('http')
+let {getUsers, setUsers} = require('./repository')
 
 
 let cors = (req,res) => {
@@ -23,7 +24,7 @@ let server = http.createServer( (req, res)=>{
         if ((req.method === POST)){
             users.push({name:'Alex'})
         }else {
-            res.write(JSON.stringify(users))
+            res.write(JSON.stringify(getUsers))
         }
             break;
             case '/tasks': res.write(`<h2>Tasks<h2/>`)
