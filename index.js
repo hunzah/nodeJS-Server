@@ -1,9 +1,6 @@
 let http = require('http')
 
-let users = [
-    {"id": 1, "banned": true, "name": "Oleg"},
-    {"id": 2, "banned": false, "name": "Ali"}
-]
+
 let cors = (req,res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Request-Method', '*')
