@@ -5,7 +5,7 @@ let users = [
     {"id": 2, "banned": false, "name": "Ali"}
 ]
 let cors = (req,res) => {
-    
+    res.setHeader('Access-Control-Allow-Origin', '*')
 }
 
 
