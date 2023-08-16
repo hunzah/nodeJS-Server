@@ -4,12 +4,12 @@ const users = [
 ];
 
 const getUsers = () => {
-
-  return new Promise((res, rej) => {
+  let promise = new Promise((res, rej) => {
     fs.readFile("users.json", function (err, buf) {
-        res(buf.toString());
-      });
+      res(buf.toString());
+    });
   });
+  return promise;
 };
 
 const setUsers = (name) => {
